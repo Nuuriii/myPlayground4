@@ -37,4 +37,47 @@ a {
 .navMenu {
    display: flex;
    justify-content: space-between;
+   align-items: center;
+   gap: 60px;
+}
+
+/* media quaries */
+@media screen and (max-width: 780px) {
+   /* hamburger */
+   .hamburger {
+      display: block;
+      cursor: pointer;
+   }
+
+   .bar {
+      background-color: #120f0b;
+      width: 20px;
+      height: 3px;
+      display: block;
+      margin: 5px;
+      -webkit-transition: 0.3s ease-in-out;
+      transition: 0.3s ease-in-out;
+   }
+
+   /* navMenu */
+   .navMenu {
+      position: absolute;
+      flex-direction: column;
+      gap: 0;
+      top: 70px;
+      left: -100%;
+      text-align: start;
+      width: 100%;
+      transition: 0.7s ease-in-out;
+      background-color: aliceblue;
+      padding: 10px;
+   }
+
+   .navMenu.active {
+      left: 0;
+   }
+
+   .navMenu li {
+      margin: 16px 0;
+   }
 }
