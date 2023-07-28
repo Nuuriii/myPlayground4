@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./Navbar.module.css";
 
-export const Navbar = () => {
+const Navbar = () => {
    //adding the states
    const [isActive, setIsActive] = useState(false);
 
@@ -16,7 +16,7 @@ export const Navbar = () => {
    };
 
    return (
-      <div className='App'>
+      <div>
          <header className='App-header'>
             <nav className={`${styles.navbar}`}>
                {/* logo */}
@@ -65,3 +65,5 @@ export const Navbar = () => {
       </div>
    );
 };
+
+export default Navbar;
