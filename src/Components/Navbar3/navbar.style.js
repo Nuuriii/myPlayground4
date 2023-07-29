@@ -86,4 +86,19 @@ export const List = styled.li`
       display: block;
       width: 100%;
    }
+   @media screen and (max-width: 768px) {
+      text-align: center;
+      margin: 0;
+
+      &:hover {
+         background-color: #eee;
+      }
+
+      a {
+         color: black;
+         // Mengatur lebar element
+         width: 100%;
+         padding: 1.5rem 0;
+      }
+   }
 `;
