@@ -1,12 +1,21 @@
+import { useState } from "react";
 import "./style/Navbar.css";
 
 export const Navbar = () => {
+   //buat state untuk mengatur event untuk hamburger icon
+   const [isOpen, setIsOpen] = useState(false);
+
    return (
       <nav className='navigation'>
          <a href='/' className='brand-name'>
             Macrosoft
          </a>
-         <button className='hamburger'>
+         <button
+            className='hamburger'
+            onClick={() => {
+               setIsOpen(!isOpen);
+            }}
+         >
             {/* icon from heroicons.com */}
             <svg
                xmlns='http://www.w3.org/2000/svg'
@@ -21,7 +30,9 @@ export const Navbar = () => {
                />
             </svg>
          </button>
-         <div className='navigation-menu'>
+         <div
+            className={isOpen ? "navigation-menu expanded" : "navigation-menu"}
+         >
             <ul>
                <li>
                   <a href='/Home'>Home</a>
