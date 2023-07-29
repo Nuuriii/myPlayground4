@@ -56,22 +56,25 @@ export const ListWrapper = styled.ul`
    @media screen and (max-width: 768px) {
       // Atur posisi ul ketika di mode mobile
       // Karena kita akan menggunakan kelas lain untuk mngatur tampilan menu, maka jadikan tampilannya menjadi tidak ada
-      display: none;
       position: absolute;
       top: 60px;
-      left: 0%;
+      display: none;
+      right: 0;
+      transition: all 3s;
 
       // Jadikan li menjadi vertical
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
       // Atur tinggi dan lebar element
       width: 100%;
       height: calc(100vh - 77px);
-      background-color: white;
+      background-color: gray;
       border-top: 1px solid black;
 
       &.show {
-         display: block;
+         display: flex;
       }
    }
 `;
