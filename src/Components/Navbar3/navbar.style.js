@@ -70,7 +70,7 @@ export const ListWrapper = styled.ul`
       background-color: white;
       border-top: 1px solid black;
 
-      .expanded {
+      &.show {
          display: block;
       }
    }

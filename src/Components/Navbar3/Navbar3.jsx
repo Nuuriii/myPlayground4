@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
    Navigation,
    BrandName,
@@ -7,11 +8,21 @@ import {
    List,
 } from "./navbar.style";
 
-export const Navbar3 = () => {
+export const Navbar3 = (event) => {
+   const [isOpen, setIsOpen] = useState(false);
+
+   const Toggle = () => {
+      setIsOpen(!isOpen);
+   };
+
    return (
       <Navigation>
          <BrandName>LINUX</BrandName>
-         <Hamburger>
+         <Hamburger
+            onClick={() => {
+               Toggle();
+            }}
+         >
             <svg
                xmlns='http://www.w3.org/2000/svg'
                className='h-5 w-5'
@@ -26,7 +37,7 @@ export const Navbar3 = () => {
             </svg>
          </Hamburger>
          <Menu>
-            <ListWrapper>
+            <ListWrapper className={isOpen ? "show" : ""}>
                <List>
                   <a href='/'>Home</a>
                </List>
