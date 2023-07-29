@@ -78,6 +78,42 @@
 
    /* sembunyikan element ul */
    .navigation-menu > ul {
+      /* atur posisi ul ketika di mode mobile */
+      /* karena kita akan menggunakan kelas lain untuk mngatur tampilan menu, maka jadikan tampilannya menjadi tidak ada */
       display: none;
+      position: absolute;
+      top: 60px;
+      left: 0%;
+
+      /* jadika li menjadi vertical */
+      flex-direction: column;
+
+      /* atur tinggi dan lebar element */
+      width: 100%;
+      height: calc(100vh - 77px);
+      background-color: white;
+      border-top: 1px solid black;
+   }
+
+   .navigation-menu .expanded > ul {
+      display: block;
+   }
+
+   .navigation-menu > ul li {
+      /* menjadikan anchor menjadi rata tengah */
+      text-align: center;
+      margin: 0;
+   }
+
+   .navigation-menu > ul li a {
+      color: black;
+      /* mengatur lebar element */
+      width: 100%;
+      padding: 1.5rem 0;
+   }
+
+   /* mengatur efek hover */
+   .navigation-menu > ul li:hover {
+      background-color: #eee;
    }
 }
