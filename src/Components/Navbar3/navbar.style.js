@@ -69,6 +69,10 @@ export const ListWrapper = styled.ul`
       height: calc(100vh - 77px);
       background-color: white;
       border-top: 1px solid black;
+
+      .expanded {
+         display: block;
+      }
    }
 `;
 
