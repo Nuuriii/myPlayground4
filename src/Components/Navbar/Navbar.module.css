@@ -7,6 +7,7 @@
 }
 
 ul {
+   /* karena ini ul, kita perlu property list style untuk menghapus bullet */
    list-style: none;
 }
 
