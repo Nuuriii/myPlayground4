@@ -40,6 +40,10 @@ export const Hamburger = styled.button`
    &:hover {
       background-color: #2642af;
    }
+
+   @media screen and (max-width: 768px) {
+      display: block;
+   }
 `;
 
 export const Menu = styled.div`
@@ -49,6 +53,23 @@ export const Menu = styled.div`
 export const ListWrapper = styled.ul`
    display: flex;
    padding: 0;
+   @media screen and (max-width: 768px) {
+      // Atur posisi ul ketika di mode mobile
+      // Karena kita akan menggunakan kelas lain untuk mngatur tampilan menu, maka jadikan tampilannya menjadi tidak ada
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0%;
+
+      // Jadikan li menjadi vertical
+      flex-direction: column;
+
+      // Atur tinggi dan lebar element
+      width: 100%;
+      height: calc(100vh - 77px);
+      background-color: white;
+      border-top: 1px solid black;
+   }
 `;
 
 export const List = styled.li`
