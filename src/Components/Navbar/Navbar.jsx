@@ -3,9 +3,11 @@ import styles from "./Navbar.module.css";
 
 const Navbar = () => {
    //adding the states
+   //useState digunakan untuk membuat status, default statusnya ialah false. ini digunakan untuk mengaktifkan kelas pada menu navigasi dan ikon hamburger saat diklik
    const [isActive, setIsActive] = useState(false);
 
    //add the active class
+   //fungsi ini untuk membuat status
    const toggleActiveClass = () => {
       setIsActive(!isActive);
    };
@@ -15,6 +17,7 @@ const Navbar = () => {
       setIsActive(false);
    };
 
+   console.log(isActive);
    return (
       <div>
          <header className='App-header'>
