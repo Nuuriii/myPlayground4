@@ -51,6 +51,7 @@ a {
       cursor: pointer;
    }
 
+   /* untuk membuat hamburger icon */
    .bar {
       background-color: #120f0b;
       width: 20px;
@@ -67,16 +68,16 @@ a {
       flex-direction: column;
       gap: 0;
       top: 70px;
-      left: -100%;
+      right: -100%;
       text-align: start;
       width: 100%;
-      transition: 0.7s ease-in-out;
+      transition: 0.3s ease-in-out;
       background-color: aliceblue;
       padding: 10px;
    }
 
    .navMenu.active {
-      left: 0;
+      right: 0;
    }
 
    .navMenu li {
