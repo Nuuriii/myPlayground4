@@ -7,12 +7,13 @@ const Navbar = () => {
    const [isActive, setIsActive] = useState(false);
 
    //add the active class
-   //fungsi ini untuk membuat status
+   //fungsi ini untuk membuat status menjadi true ketika ikon hamburger pertama kali diklik
    const toggleActiveClass = () => {
       setIsActive(!isActive);
    };
 
    //clean up function to remove the active class
+   //fungsi untuk menyetel status variabel ke false saat salah satu tautan navigasi diklik
    const removeActive = () => {
       setIsActive(false);
    };
