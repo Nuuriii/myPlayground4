@@ -64,20 +64,20 @@ a {
 
    /* navMenu */
    .navMenu {
-      position: absolute;
+      display: none;
       flex-direction: column;
       gap: 0;
-      top: 70px;
-      right: -100%;
       text-align: start;
       width: 100%;
-      transition: 0.3s ease-in-out;
       background-color: aliceblue;
       padding: 10px;
    }
 
    .navMenu.active {
-      right: 0;
+      display: flex;
+      position: absolute;
+      top: 70px;
+      left: 0%;
    }
 
    .navMenu li {
