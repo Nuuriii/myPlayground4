@@ -1,8 +1,8 @@
-import { Wrapper } from "./Components/Navbar2/Wrapper";
+import { WrapperNav } from "./Components/Navbar3/WrapperNav";
 export const App = () => {
    return (
       <div>
-         <Wrapper />
+         <WrapperNav />
       </div>
    );
 };
